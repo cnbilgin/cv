@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cihad Nusret Bilgin - Full-Stack Developer" />
+    <title>Cihad Nusret Bilgin - Full-Stack Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/triangle-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.25.6/sweetalert2.all.min.js"></script>
+
+    <script src="assets/js/global.js"></script>
+
+    <style>
+        #preloader {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: #FFF;
+            margin: auto;
+            animation: preloader 1s ease-in-out infinite;
+        }
+
+        #preloader::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 100%;
+            animation: preloader-shadow 1s ease-in-out infinite;
+            animation-delay: 800ms;
+        }
+
+        @keyframes preloader-shadow {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            60% {
+                opacity: 0;
+                transform: scale(4);
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes preloader {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+            }
+
+            60% {
+                transform: scale(1.4);
+                box-shadow: 0 25px 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <div id="site">
+        <div id="container" class="animated">
+            <header>
+                <div id="menu">
+                    <div class="item active">
+                        <i class="fas fa-user-alt"></i>
+                        <span>BEN</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EĞİTİM</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>PROJE</span>
+                    </div>
+                    <div class="item" id="btnTabContact">
+                        <i class="fas fa-at"></i>
+                        <span>İLETİŞİM</span>
+                    </div>
+                </div>
+                <div class="title">
+                    <div class="bg"></div>
+                    <div class="img animated">
+                        <img src="assets/images/profile.jpg" alt="Cihad Nusret Bilgin" />
+                    </div>
+                    <div class="info">
+                        <h1>Cihad Nusret Bilgin</h1>
+                        <p>Full-stack Developer</p>
+                    </div>
+                </div>
+                <div class="contacts">
+                    <a href="https://www.r10.net/members/85767-ensferium.html" target="_blank" class="r10"
+                        data-tooltip="left" data-title="r10"><i class="fas fa-robot"></i></a>
+                    <a href="https://www.linkedin.com/in/cnbilgin/" target="_blank" class="linkedin" data-tooltip="up"
+                        data-title="linked.in"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/cnbilgin" target="_blank" class="github" data-tooltip="right"
+                        data-title="github"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="buttons">
+                    <div class="item">
+                        <a href="/Cihad_Nusret_Bilgin-Fullstack_Developer.pdf" target="_blank">DOWNLOAD CV</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" id="contactMe">CONTACT ME</a>
+                    </div>
+                </div>
+            </header>
+            <div id="content">
+                <div class="item show">
+                    <div class="block">
+                        <div class="title">
+                            <h2>Ben kimim?</h2>
+                        </div>
+                        <div class="cont">
+                            <p>Okulda başlayan yazılım geliştirme serüvenimi, .NET ve Nesne Yönelimli Programlama
+                                eğitimleri başta olmak üzere, uzman kişilerden almış ve almakta olduğum eğitimleri,
+                                dahil olduğum kurumsal projelerle birlikte bilgi birikimine ve tecrübeye dönüştürmeye
+                                çalışmaktayım. Son zamanlarda yoğunlaştığım ve uzmanlaşmakta olduğum temel konu ERP
+                                sistemleriyle entegre çalışan Tahsilat(Sanal Pos vb. ödeme kapıları ile birlikte) ve
+                                E-Ticaret sistemleri ile reel sektörde yer alan kurumsal şirketlere inovatif çözümler
+                                geliştirebilmek üzerinedir.</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="title">
+                            <h2>Neler biliyorum?</h2>
+                        </div>
+                        <div class="cont">
+                            <div class="img-text-block">
+                                <div class="img-wrapper">
+                                    <div class="img">
+                                        <img src="assets/images/icons/dotnet.jpg" alt="dotnet" data-lazy="2" />
+                                    </div>
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="text">
+                                    <h4>.NET (MVC)</h4>
+                                    <span>5+ YIL</span>
+                                </div>
+                            </div>
+                            <div class="img-text-block">
+                                <div class="img-wrapper">
+                                    <div class="img">
+                                        <img src="assets/images/icons/html5.jpg" alt="html5" data-lazy="2" />
+                                    </div>
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="text">
+                                    <h4>HTML</h4>
+                                    <span>5+ Yıl</span>
+                                </div>
+                            </div>
+                            <div class="img-text-block">
+                                <div class="img-wrapper">
+                                    <div class="img">
+                                        <img src="assets/images/icons/jquery.jpg" alt="jQuery" data-lazy="2" />
+                                    </div>
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="text">
+                                    <h4>jQuery</h4>
+                                    <span>5+ YIL</span>
+                                </div>
+                            </div>
+                            <div class="img-text-block">
+                                <div class="img-wrapper">
+                                    <div class="img">
+                                        <img src="assets/images/icons/angular.jpg" alt="Angular" data-lazy="2" />
+                                    </div>
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="text">
+                                    <h4>Angular</h4>
+                                    <span>0-1 YIL</span>
+                                </div>
+                            </div>
+                            <div class="img-text-block">
+                                <div class="img-wrapper">
+                                    <div class="img">
+                                        <img src="assets/images/icons/xamarin.jpg" alt="Xamarin" data-lazy="2" />
+                                    </div>
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="text">
+                                    <h4>Xamarin</h4>
+                                    <span>0-1 YIL</span>
+                                </div>
+                            </div>
+                            <div class="img-text-block">
+                                <div class="img-wrapper">
+                                    <div class="img">
+                                        <img src="assets/images/icons/ionic.jpg" alt="Ionic Framework" data-lazy="2" />
+                                    </div>
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="text">
+                                    <h4>Ionic Framework</h4>
+                                    <span>0-1 YIL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="block">
+                        <div class="title">
+                            <h2>Eğitimlerim</h2>
+                        </div>
+                        <div class="cont">
+                            <div class="timeline">
+                                <div class="item">
+                                    <div class="date">2015 - Devam Ediyor</div>
+                                    <div class="title">YILDIZ TEKNİK ÜNİVERSİTESİ</div>
+                                    <div class="tech">Bilgisayar ve Öğrenim Teklonojileri Eğitimi Bölümü</div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="date">2016</div>
+                                    <div class="title">ASP.NET MVC İLE WEB PROGRAMLAMA</div>
+                                    <div class="tech">BT Akademi</div>
+                                    <div class="info">MVC mimarisine geçiş yapmak için almış olduğum hızlandırılmış bir
+                                        kurs.</div>
+                                </div>
+                                <div class="item">
+                                    <div class="date">2015</div>
+                                    <div class="title">C# İLE NESNE YÖNELİMLİ PROGRAMLAMA</div>
+                                    <div class="tech">C ve Sistem Programcıları Derneği</div>
+                                    <div class="info">Temel C# ve .NET kavramları içeren ve bununla birlikte nesne
+                                        yönelimli programlama prensiplerini anlatan detaylı ve uzun soluklu bir eğitim
+                                        programı.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="block">
+                        <div class="title">
+                            <h2>Tecrübelerim</h2>
+                        </div>
+                        <div class="cont">
+                            <div class="timeline">
+                                <div class="item">
+                                    <div class="date">2013 - 2018</div>
+                                    <div class="title">BACK-END Developer</div>
+                                    <div class="tech">.NET MVC</div>
+                                    <div class="info">Geliştirme hayatıma başladığım C# ile yıllardır .NET WEB projeleri
+                                        geliştiriyorum. MVC ve Entity Framework ile web projelerimin temelini oluşturup
+                                        Design Pattern’ler ile daha esnek ve tekrar kullanılabilir yapılar oluşturmayı
+                                        hedeflemekteyim.</div>
+                                </div>
+                                <div class="item">
+                                    <div class="date">2013 - 2018</div>
+                                    <div class="title">FRONT-END Developer</div>
+                                    <div class="tech">HTML - CSS - jQuery</div>
+                                    <div class="info">Tasarım dokümanının HTML’e çevrilmesi, responsive, esnek,
+                                        animasyonlu tasarımlar, jQuery ile interaktif web sayfalarının geliştirilmesi
+                                        gibi konularda deneyim edindim. W3 standartlarına uymaya ve sayfa açılış
+                                        optimizasyonlarını uygulamaya özen göstermekteyim.</div>
+                                </div>
+                                <div class="item">
+                                    <div class="date">2017 - 2018</div>
+                                    <div class="title">MIDDLE-TIER Developer</div>
+                                    <div class="tech">Angular</div>
+                                    <div class="info">Gelişen teknolojilerle birlikte, API tabanlı WEB sayfalarının daha
+                                        esnek, kullanışlı ve bağımsız olduğunu fark etmem neticesinde, sorumlusu olduğum
+                                        uygulamaların güncel teknolojiler ile geliştirilmesi gerektiğine kanaat
+                                        getirdim.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="block">
+                        <div class="title">
+                            <h2>İletişim</h2>
+                        </div>
+                        <div class="cont">
+                            <div class="img-bw-title" style="margin:15px;">
+                                <img src="assets/images/istanbul-avrupa.jpg" alt="İstanbul Avrupa Yakası" />
+                                <div class="text" style="justify-content: flex-end;">
+                                    <h2>İstanbul</h2>
+                                    <h3>Avrupa Yakası</h3>
+                                    <div class="cont">
+                                        <div class="item">
+                                            <i class="fas fa-envelope-open"></i>
+                                            <a href="mailto:hi@cnbilgin.com">hi@cnbilgin.com</a>
+                                        </div>
+                                        <div class="item">
+                                            <i class="fab fa-skype"></i>
+                                            <a href="skype:cnb197?chat">cnb197</a>
+                                        </div>
+                                        <div class="item">
+                                            <i class="fas fa-mobile"></i>
+                                            <a href="tel:+905392473295">+(90) 539 247 3295</a>
+                                        </div>
+                                        <div class="item">
+                                            <i class="fab fa-linkedin"></i>
+                                            <a href="https://www.linkedin.com/in/cnbilgin/"
+                                                target="_blank">in/cnbilgin</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="title">
+                            <h2>Mesaj Gönder</h2>
+                        </div>
+                        <div class="cont">
+                            <form id="contact-form">
+                                <div class="input">
+                                    <input type="text" required name="Name" placeholder="Adınız" />
+                                </div>
+                                <div class="input">
+                                    <input type="email" required name="Email" placeholder="Email Adresiniz" />
+                                </div>
+                                <div class="input full-width" style="margin-bottom:10px;">
+                                    <textarea name="Message" required placeholder="Mesajınız..."></textarea>
+                                </div>
+                                <button type="submit" id="btnSendMail">GÖNDER</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="triangle-animation-context"></div>
+</body>
+
+</html>
